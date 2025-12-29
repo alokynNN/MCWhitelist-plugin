@@ -1,0 +1,21 @@
+name: McWhitelistAuth
+version: '1.0.0'
+main: com.mcwhitelist.auth.McWhitelistAuth
+authors: [ McWhitelist ]
+description: Authentication and whitelist plugin for McWhitelist
+website: https://mcwhitelist.com
+
+commands:
+  mcwhitelist:
+    description: McWhitelist plugin commands
+    usage: /<command> <init|status|reload>
+    permission: mcwhitelist.admin
+    aliases: [ mcwl ]
+
+permissions:
+  mcwhitelist.admin:
+    description: Access to all McWhitelist commands
+    default: op
+  mcwhitelist.bypass:
+    description: Bypass whitelist check
+    default: false

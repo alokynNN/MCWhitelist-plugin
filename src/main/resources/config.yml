@@ -1,0 +1,91 @@
+# McWhitelist Plugin Configuration
+# DO NOT modify 'initialized', 'api' section, or intervals manually!
+
+# Plugin state (automatically managed)
+initialized: false
+debug: true
+# API Configuration (automatically managed - do not edit)
+api:
+  base-url: "https://mcwhitelist.alokyn.com/api" 
+  server-uuid: ""
+  init-key: ""
+
+# Feature toggles (automatically managed via commands)
+heartbeat:
+  enabled: true
+  interval: 5
+
+whitelist:
+  enabled: true
+
+player-check:
+  enabled: true
+  interval: 5
+
+# ================================================================
+# CUSTOMIZABLE MESSAGES - Edit these as you wish!
+# ================================================================
+
+# Kick Messages (use & for color codes)
+kick-messages:
+  # Default kick message for non-whitelisted players
+  not-whitelisted: |
+    &c[McWhitelist]
+    
+    &eYou are not whitelisted on this server!
+    &7Please ask the server owner for access.
+    
+    &7Get your ID at: &bmcwhitelist.com
+
+  # When software is required but player doesn't have it running
+  software-required: |
+    &c[McWhitelist]
+    
+    &eYou must have McWhitelist software running!
+    &7This server requires active McWhitelist software.
+    
+    &7Download at: &bmcwhitelist.com
+  
+  # When user account is not found
+  user-not-found: |
+    &c[McWhitelist]
+    
+    &eAccount not found!
+    &7Please register at: &bmcwhitelist.com
+  
+  # When plugin needs reinitialization
+  plugin-error: |
+    &c[McWhitelist]
+    
+    &eServer plugin needs reinitialization!
+    &7Contact server administrator.
+  
+  # When verification fails
+  verification-failed: |
+    &c[McWhitelist]
+    
+    &eCould not verify access!
+    &7Try again or contact server administrator.
+
+# Command Messages
+messages:
+  prefix: "&8[&bMcWhitelist&8]&r "
+  
+  # Initialization messages
+  not-initialized: "&cPlugin not initialized! Use /mcwhitelist init <server-uuid> <init-key>"
+  already-initialized: "&cPlugin is already initialized!"
+  initialization-success: "&aPlugin initialized successfully!"
+  initialization-failed: "&cInitialization failed: Check console for details"
+  
+  # Command feedback
+  reload-success: "&aConfiguration reloaded!"
+  
+  # Status display
+  status-initialized: "&aStatus: &2Initialized"
+  status-not-initialized: "&cStatus: &4Not Initialized"
+  heartbeat-enabled: "&aHeartbeat: &2Enabled"
+  heartbeat-disabled: "&cHeartbeat: &4Disabled"
+  whitelist-enabled: "&aWhitelist: &2Enabled"
+  whitelist-disabled: "&cWhitelist: &4Disabled"
+  player-check-enabled: "&aPlayer Check: &2Enabled"
+  player-check-disabled: "&cPlayer Check: &4Disabled"
